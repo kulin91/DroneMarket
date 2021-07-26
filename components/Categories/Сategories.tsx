@@ -2,8 +2,6 @@ import * as React from 'react';
 import { Text, View, TouchableOpacity } from 'react-native';
 import { style } from './style';
 
-
-
 type Props = Readonly<{
   selectedCategoryIndex: number,
   setSelectCategoryIndex: (index: number) => void,

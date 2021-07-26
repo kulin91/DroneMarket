@@ -21,7 +21,7 @@ const goodsList: Good[] = [
     rating: 4.2,
     speed: 10,
     typeOf: "Ordinary",
-  }, 
+  },
   {
     _id: "2",
     title: "DJI Mavic Mini",

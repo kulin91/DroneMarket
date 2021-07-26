@@ -17,8 +17,6 @@ import { Good } from '../../hooks/useGoods';
 import PhoneNumber from 'awesome-phonenumber';
 import { style } from './style';
 
-
-
 type RouterParams = Readonly<{ good: Good }>
 
 export default function GoodScreen() {
@@ -32,13 +30,12 @@ export default function GoodScreen() {
     setInput(phoneNumber.getNumber("international"));
   }
 
-
   const route = useRoute();
   const navigation = useNavigation();
 
   const { good } = route.params as RouterParams;
 
-  const loadScene = () => {
+  const backToScreen = () => {
     navigation.goBack()
   }
 
@@ -83,7 +80,7 @@ export default function GoodScreen() {
           </Modal>
           <Pressable>
             <View style={style.containerGood}>
-              <Ionicons onPress={loadScene} style={style.buttonIcon} name="chevron-back-outline" size={30} />
+              <Ionicons onPress={backToScreen} style={style.buttonIcon} name="chevron-back-outline" size={30} />
             </View>
             <View style={style.containerImg}>
               <Image source={good.imgSrc} style={style.imgGood} />

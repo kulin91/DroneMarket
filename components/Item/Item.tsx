@@ -5,14 +5,9 @@ import { useNavigation } from '@react-navigation/native';
 import { Good } from '../../hooks/useGoods';
 import { style } from './style';
 
-
-
-
-
 type Props = Readonly<{
   good: Good;
 }>
-
 
 export default function Item(props: Props) {
 
@@ -20,7 +15,7 @@ export default function Item(props: Props) {
 
   const navigation = useNavigation();
 
-  const loadScene = () => {
+  const loadScreen = () => {
     navigation.navigate('Good', { good })
   }
 
@@ -28,17 +23,16 @@ export default function Item(props: Props) {
     return (num ^ 0) === num;
   }
 
-  function price(i: number) {
+  function price(value: number) {
 
-    if (isInteger(i)){
-      return i;
+    if (isInteger(value)) {
+      return value;
     }
-    return i.toFixed(2)
+    return value.toFixed(2)
   }
 
-
   return (
-    <TouchableOpacity onPress={loadScene} style={style.itemContainer}
+    <TouchableOpacity onPress={loadScreen} style={style.itemContainer}
     >
       <Image source={good.imgSrc} style={{ height: 168, width: 202, }} />
       <Text style={style.itemTitle}>{good.title}</Text>

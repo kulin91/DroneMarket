@@ -7,8 +7,6 @@ import Categories from '../../components/Categories/Сategories';
 import ItemContainer from '../../components/ItemContainer/ItemContainer';
 import { useGoods } from '../../hooks/useGoods';
 
-
-
 export default function Home() {
 
   const { goods, selectedCategoryIndex, setSelectCategoryIndex, categories } = useGoods();
@@ -22,7 +20,7 @@ export default function Home() {
             <BurgerMenu />
             <Advertising />
             <Categories selectedCategoryIndex={selectedCategoryIndex} setSelectCategoryIndex={setSelectCategoryIndex} categories={categories} />
-            <ItemContainer goods={goods}/>
+            <ItemContainer goods={goods} />
           </ScrollView>
         </View>
       </SafeAreaView>

@@ -3,9 +3,6 @@ import { Text, View } from 'react-native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import { style } from './style';
 
-
-
-
 export default function BurgerMenu() {
   return (
     <View>

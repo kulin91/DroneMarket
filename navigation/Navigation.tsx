@@ -8,11 +8,8 @@ import Favorites from '../screens/Favorites/FavoritesScreen';
 import Home from '../screens/Home/HomeScreen';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
-
-
 const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
-
 
 const TabNavigator = () => {
   return (
@@ -67,7 +64,6 @@ const TabNavigator = () => {
     </Tab.Navigator>
   );
 };
-
 
 export const AppNavigation = () => (
   <Stack.Navigator headerMode="none" >
